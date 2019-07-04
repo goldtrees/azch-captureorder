@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: goldtreesazchcaptureorder 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: goldtreesazchcaptureorder 
+    spec:
+      containers:
+        - name: goldtreesazchcaptureorder 
+          image: regtest1212.azurecr.io/goldtreesazchcaptureorder 
+          ports:
+          - containerPort: 8080
